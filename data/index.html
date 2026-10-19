@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data | Mercenomics</title>
+<meta name="description" content="The datasets Mercenomics is building from official United States records on overseas contractors: what each will contain, where the figures come from, and what they cannot be used to say.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.png" type="image/png">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <span class="block">M</span>
+      <span class="name">Mercenomics</span>
+    </a>
+    <p class="strap">Open data and research on the business of force for hire.</p>
+    <nav class="main">
+      <a href="../">Home</a>
+      <a href="../data/" aria-current="page">Data</a>
+      <a href="../research/">Research</a>
+      <a href="../sources/">Sources</a>
+      <a href="../glossary/">Glossary</a>
+      <a href="../corrections/">Corrections</a>
+      <a href="../about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <h1>Data</h1>
+
+  <div class="status">
+    <p><strong>Nothing has been published yet.</strong> This page describes what each dataset will contain and names the official source behind it, so the work can be checked as it is done. When a file is published, its download, its documentation and its permanent identifier will appear here.</p>
+  </div>
+
+  <table>
+    <tr>
+      <th>Dataset</th>
+      <th>Source</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>Defense Base Act injury and death claims</td>
+      <td>US Department of Labor</td>
+      <td>In preparation</td>
+    </tr>
+    <tr>
+      <td>Contractor census archive</td>
+      <td>US Department of Defense</td>
+      <td>In preparation</td>
+    </tr>
+    <tr>
+      <td>Federal security contract spending</td>
+      <td>USAspending.gov</td>
+      <td>Planned</td>
+    </tr>
+  </table>
+
+  <div class="split">
+  <div class="panel">
+
+  <h2>Defense Base Act injury and death claims</h2>
+
+  <p>The Defense Base Act is a United States law requiring insurance for civilian employees working overseas on American military bases or under United States government contracts. When one of those workers is injured or killed, a claim is filed, and the Department of Labor publishes counts of those claims.</p>
+
+  <p>Those counts are published in three different shapes: one cumulative report covering September 2001 to September 2024, separate reports for each financial year, and older quarterly snapshots. The earlier years are web pages; the recent years are spreadsheets.</p>
+
+  <p>This dataset will stitch every report into one long table, with one row per financial year, country where the injury happened, and claim type.</p>
+
+  <h3>What it cannot be used to say</h3>
+
+  <ul>
+    <li>These are <strong>claims filed</strong>, not injuries or deaths that occurred. The Department of Labor states plainly that the reports do not constitute complete or official casualty statistics.</li>
+    <li>The country column records <strong>where the injury or death happened</strong>, not the worker's nationality. The Department does not publish nationality in these reports.</li>
+    <li><strong>Small numbers are hidden.</strong> Categories below a threshold are suppressed for privacy, and the threshold changed in the 2024 financial year. The dataset will flag every suppressed cell rather than treat it as zero.</li>
+    <li>It covers civilian workers on United States government contracts generally, including logistics, construction, catering and translation as well as security, not only private military and security work.</li>
+  </ul>
+
+  </div>
+  <div class="panel">
+
+  <h2>Contractor census archive</h2>
+
+  <p>For roughly eighteen years the United States Department of Defense published a quarterly report counting the contractor personnel supporting its operations in the Central Command area, which covers the Middle East, Afghanistan and surrounding countries. Each report breaks the total down by United States citizens, third-country nationals and local nationals, by country group, and by the kind of work being done, including a separate count of armed private security personnel.</p>
+
+  <p>The series ended with the report for the second quarter of the 2025 financial year. This dataset will therefore be a finished archive rather than a running tracker: every quarterly report, from the fourth quarter of the 2007 financial year to the end of the series, as one machine-readable file.</p>
+
+  <h3>Breaks in the series that the file will record</h3>
+
+  <ul>
+    <li>No contractor data was released for the second, third and fourth quarters of the 2014 financial year.</li>
+    <li>Private security contractor counts begin in the first quarter of the 2008 financial year.</li>
+    <li>Reporting of Department-funded private security personnel in Iraq stopped after the fourth quarter of the 2013 financial year.</li>
+    <li>Syria was added as a reported location in the second quarter of the 2018 financial year, and Israel in the fourth quarter of the 2021 financial year.</li>
+  </ul>
+
+  <h3>What it cannot be used to say</h3>
+
+  <ul>
+    <li>It counts <strong>Department of Defense-funded contractor personnel in one command's area</strong>. It is not a count of all contractors working for the United States, and not a count of mercenaries.</li>
+    <li>Most of the people counted do support work: supply, construction, maintenance, catering, translation. Armed security personnel are a small share, reported separately.</li>
+    <li>The Congressional Research Service compiled parts of this series for Congress, and its report is credited in the documentation and on the <a href="../sources/">Sources</a> page.</li>
+  </ul>
+
+  </div>
+  </div>
+
+  <h2>Federal security contract spending</h2>
+
+  <p>United States federal contracts for guard and security services are published on USAspending.gov. This dataset would isolate those contracts by agency, company, amount and place of performance.</p>
+
+  <p>It is listed last on purpose. Free commercial dashboards already chart this spending, so it adds less than the other two, and much of the activity is domestic guarding rather than overseas security work. It will be built only once the first two are finished and documented.</p>
+
+  <h2>Licence</h2>
+
+  <p>Each dataset Mercenomics builds will be published under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: free to download, reuse and republish, including commercially, with credit. The underlying government records keep their own terms, which each dataset's documentation states.</p>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Mercenomics is an independent research initiative founded in April 2026 by Kazi Affnann Azom. It takes no money from the firms it covers.</p>
+    <p>Site code and text: &copy; 2026 Kazi Affnann Azom, all rights reserved. Datasets published by Mercenomics: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>; source material keeps its own terms.</p>
+    <p>Contact: <a href="mailto:mercenomics@gmail.com">mercenomics@gmail.com</a> &nbsp;·&nbsp; This site sets no cookies and collects no personal data.</p>
+  </div>
+</footer>
+
+</body>
+</html>
