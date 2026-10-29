@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datasets: contractor census, injury claims, guard spending and Japan guard pay | Mercenomics</title>
 <meta name="description" content="Four free, documented datasets on force for hire, each with a permanent DOI: the Department of Defense contractor census 2008 to 2025, Defense Base Act injury and death claims, US federal guard-service contracts 2008 to 2026, and Japan's official traffic-guard pay rates 2012 to 2026.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="../style.css">
 <link rel="icon" href="../favicon-192.png" sizes="192x192" type="image/png">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
@@ -60,6 +61,12 @@
 
   <p class="lead">Four datasets, each built from official records, checked against its source, and published with a permanent identifier (DOI) so it can be cited. All are free to download.</p>
 
+  <form id="finder" class="finder" role="search" hidden>
+    <label for="q">Search the datasets</label>
+    <input id="q" name="q" type="search" maxlength="100" autocomplete="off" spellcheck="false" placeholder="Name, DOI, source, country, year or column">
+    <p id="finder-status" class="note" aria-live="polite"></p>
+  </form>
+
   <table>
     <tr>
       <th>Dataset</th>
@@ -67,31 +74,33 @@
       <th>Covers</th>
       <th>Get the data</th>
     </tr>
-    <tr>
+    <tr data-ds="census" data-search="Contractor census archive US Department of Defense contractor census for the CENTCOM area, FY2008 to FY2025 contractor-census: U.S. DoD quarterly contractor census for the USCENTCOM area, FY2008-FY2025 contractor-census contractor-census 10.5281/zenodo.23736050 10.5281/zenodo.23736051 zenodo.23736050 zenodo.23736051 US Department of Defense FY2008 Q3 to FY2025 Q2 (68 quarterly reports) Iraq Afghanistan Syria Middle East defense contractors private military and security companies USCENTCOM Iraq Afghanistan third-country nationals contractor census 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 report_file fiscal_year fiscal_quarter published area label_in_report total us_citizens third_country_nationals local_nationals note CSV us united states">
       <td><a href="contractor-census/">Contractor census archive</a></td>
       <td>US Department of Defense</td>
       <td>FY2008 to FY2025</td>
       <td><a href="https://doi.org/10.5281/zenodo.23736050">Download</a></td>
     </tr>
-    <tr>
+    <tr data-ds="claims" data-search="Defense Base Act injury and death claims Defense Base Act injury and death claims by country and fiscal year, FY2009 to FY2024 contractor-injury-claims: U.S. Defense Base Act claims by country, FY2009-FY2024 contractor-injury-claims injury-claims 10.5281/zenodo.23746798 10.5281/zenodo.23746799 zenodo.23746798 zenodo.23746799 US Department of Labor FY2009 to FY2024, and 2001 to 2024 combined Iraq Afghanistan Worldwide Defense Base Act defense contractors private military and security companies workplace injuries contractor deaths Iraq Afghanistan 2001 2002 2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 fiscal_year country country_in_source no_lost_time lost_time_3_days_or_less lost_time_4_days_or_more death salary_continuation other total source_url CSV us united states">
       <td><a href="injury-claims/">Defense Base Act injury and death claims</a></td>
       <td>US Department of Labor</td>
       <td>FY2009 to FY2024, and 2001 to 2024 combined</td>
       <td><a href="https://doi.org/10.5281/zenodo.23746798">Download</a></td>
     </tr>
-    <tr>
+    <tr data-ds="spending" data-search="US federal guard-service contracts US federal guard-service contracts (product and service code S206), FY2008 to FY2026 us-guard-spending: U.S. federal guard-service contracts (PSC S206), FY2008-FY2026 us-guard-spending us-guard-spending 10.5281/zenodo.23750992 10.5281/zenodo.23750993 zenodo.23750992 zenodo.23750993 USAspending.gov FY2008 to FY2026 United States Iraq Afghanistan Germany Worldwide private security contracts guard services federal contracts USAspending PSC S206 immigration detention private military and security companies 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 transaction_key award_key piid modification_number parent_piid action_date fiscal_year obligation_usd awarding_agency awarding_subagency funding_agency recipient_uei recipient_name recipient_parent_uei recipient_parent_name recipient_country_code pop_country_code pop_country_name pop_state_code pop_city award_type action_type psc naics_code naics_description extent_competed contract_pricing contingency_operation description CSV (gzip) us united states">
       <td><a href="us-guard-spending/">US federal guard-service contracts</a></td>
       <td>USAspending.gov</td>
       <td>FY2008 to FY2026</td>
       <td><a href="https://doi.org/10.5281/zenodo.23750992">Download</a></td>
     </tr>
-    <tr>
+    <tr data-ds="japan" data-search="Japan traffic-guard pay rates Japan&#x27;s public works pay rates for traffic guards by prefecture, FY2012 to FY2026 japan-guard-price-panel: Japan&#x27;s public works pay rates for traffic guards by prefecture, FY2012-FY2026, with job-openings data for security occupations japan-guard-price-panel japan-guard-pay 10.5281/zenodo.23750536 10.5281/zenodo.23750537 zenodo.23750536 zenodo.23750537 Japan&#x27;s Ministry of Land, Infrastructure, Transport and Tourism; Ministry of Health, Labour and Welfare FY2012 to FY2026; job openings March 2012 to August 2026 Japan Japan security guards traffic guards wages public procurement job openings private security 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026 table_year effective_from pref_code prefecture_ja prefecture_en grade daily_rate_yen special_rate note source_file source_page month classification occupation occupation_ja occupation_en measure value source_file source_sheet CSV us united states">
       <td><a href="japan-guard-pay/">Japan traffic-guard pay rates</a></td>
       <td>Japan's Ministry of Land, Infrastructure, Transport and Tourism; Ministry of Health, Labour and Welfare</td>
       <td>FY2012 to FY2026</td>
       <td><a href="https://doi.org/10.5281/zenodo.23750536">Download</a></td>
     </tr>
   </table>
+
+  <p id="finder-empty" class="status" hidden>No dataset matches that search. Try a DOI, a country, a year, a source such as USAspending, or a column name.</p>
 
   <h2>How to read these numbers</h2>
 
@@ -100,6 +109,7 @@
   <div class="split">
   <div class="panel">
 
+  <section data-ds="census">
   <h2 id="census">Contractor census archive</h2>
 
   <p>For seventeen years the United States Department of Defense counted the contractor personnel working for it in the Central Command area, which covers Iraq, Afghanistan, Syria and the surrounding region, and recorded whether they were United States citizens, third-country nationals or local nationals. The series has ended: the April 2025 report states that it is the last.</p>
@@ -116,7 +126,9 @@
 
   <p><a href="https://doi.org/10.5281/zenodo.23736050"><strong>Download the dataset</strong></a>, 19 MB &nbsp;·&nbsp; <a href="contractor-census/">Full details and columns</a> &nbsp;·&nbsp; <a href="https://github.com/Affnann/contractor-census">Code and documentation</a><br>
   <span class="note">Cite with DOI 10.5281/zenodo.23736050</span></p>
+  </section>
 
+  <section data-ds="claims">
   <h2 id="claims">Defense Base Act injury and death claims</h2>
 
   <p>The Defense Base Act is a United States law requiring insurance for civilian employees working overseas on United States government contracts. When one of them is injured or killed, a claim is filed, and the Department of Labor counts those claims by country and year. Official casualty figures usually cover only soldiers, so these tables are one of the few public records of harm to civilian contractors.</p>
@@ -135,10 +147,12 @@
 
   <p><a href="https://doi.org/10.5281/zenodo.23746798"><strong>Download the dataset</strong></a>, 90 KB &nbsp;·&nbsp; <a href="injury-claims/">Full details and columns</a> &nbsp;·&nbsp; <a href="https://github.com/Affnann/contractor-injury-claims">Code and documentation</a><br>
   <span class="note">Cite with DOI 10.5281/zenodo.23746798</span></p>
+  </section>
 
   </div>
   <div class="panel">
 
+  <section data-ds="spending">
   <h2 id="spending">US federal guard-service contracts</h2>
 
   <p>Every United States federal contract action for guard services (product and service code S206) from the 2008 to the 2026 financial year, as reported on USAspending.gov: 215,353 contract actions on 50,726 contracts, for guarding embassies, military bases, immigration detention centres, courthouses and federal buildings. For every year, the cleaned file adds up to USAspending's own published total to the cent.</p>
@@ -154,7 +168,9 @@
 
   <p><a href="https://doi.org/10.5281/zenodo.23750992"><strong>Download the dataset</strong></a>, 34 MB &nbsp;·&nbsp; <a href="us-guard-spending/">Full details and columns</a> &nbsp;·&nbsp; <a href="https://github.com/Affnann/us-guard-spending">Code and documentation</a><br>
   <span class="note">Cite with DOI 10.5281/zenodo.23750992</span></p>
+  </section>
 
+  <section data-ds="japan">
   <h2 id="japan">Japan traffic-guard pay rates</h2>
 
   <p>Every year Japan's Ministry of Land, Infrastructure, Transport and Tourism sets the daily wage that government cost estimates assume for traffic guards from private security companies on public works, in all 47 prefectures. This dataset turns the ministry's tables for the 2012 to 2026 financial years into one file of 1,410 rows, and adds the Ministry of Health, Labour and Welfare's monthly figures on job openings for each job seeker in security occupations.</p>
@@ -170,6 +186,7 @@
 
   <p><a href="https://doi.org/10.5281/zenodo.23750536"><strong>Download the dataset</strong></a>, 33 MB &nbsp;·&nbsp; <a href="japan-guard-pay/">Full details and columns</a> &nbsp;·&nbsp; <a href="https://github.com/Affnann/japan-guard-price-panel">Code and documentation</a><br>
   <span class="note">Cite with DOI 10.5281/zenodo.23750536</span></p>
+  </section>
 
   </div>
   </div>
@@ -189,5 +206,6 @@
   </div>
 </footer>
 
+<script src="search.js"></script>
 </body>
 </html>
