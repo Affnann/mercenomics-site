@@ -206,6 +206,8 @@ th, td {
   border-bottom: 1px solid var(--rule);
 }
 
+td code, th code { font-size: 13px; overflow-wrap: anywhere; }
+
 th {
   font-weight: bold;
   color: var(--ink-muted);
