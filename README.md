@@ -1,6 +1,6 @@
 # mercenomics-site
 
-The website for **Mercenomics**, an independent research initiative on the business of force for hire: private military and security companies, military contracting, mercenaries and protection markets.
+The website for **Mercenomics**, which researches the outsourcing of military and security work to private firms: private military and security companies, military contracting, mercenaries and protection markets.
 
 Live at [mercenomics.org](https://mercenomics.org).
 
